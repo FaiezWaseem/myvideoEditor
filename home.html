@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mp4 to Mp3 in Node.js</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+      <div class="container">
+          <br><br>
+          <h1 class="text-center">
+              Mp4 to Mp3 in Node.js
+          </h1>
+          <br><br>
+          <form action="/convert" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" class="form-control" name="file" required>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-block btn-danger">
+                    Convert to Mp3
+                </button>
+            </div>
+        </form>
+      </div>
+      <div class="container">
+          <br><br>
+          <h1 class="text-center">
+              Mp4 Compress
+          </h1>
+          <br><br>
+          <form action="/compress" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" class="form-control" name="file" required>
+            </div>
+            <div class="form-group">
+              <label>Select bitrate</label>
+              <select name="bitrate" class="form-control">
+                  <option value="350k">240p</option>
+                  <option value="700k">360p</option>
+                  <option value="1200k">480p</option>
+                  <option value="2500k">720p</option>
+                  <option value="5000k">1080p</option>
+              </select>
+          </div>
+            <div class="form-group">
+                <button class="btn btn-block btn-danger">
+                    Compress
+                </button>
+            </div>
+        </form>
+      </div>
+      <div class="container">
+          <br><br>
+          <h1 class="text-center">
+            Video to Gif ~ note : video atleast 15 sec or greater
+          </h1>
+          <br><br>
+          <form action="/gif" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" class="form-control" name="file" required>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-block btn-danger">
+                    Make Gif
+                </button>
+            </div>
+        </form>
+      </div>
+      <div class="container">
+          <br><br>
+          <h1 class="text-center">
+            Get Video Thumbnail
+          </h1>
+          <br><br>
+          <form action="/thumbnail" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" class="form-control" name="file" required>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-block btn-danger">
+                 Generate Thumbnail
+                </button>
+            </div>
+        </form>
+      </div>
+</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>
